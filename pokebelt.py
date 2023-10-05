@@ -3,6 +3,7 @@ import functions as fn
 import pokedex as dex
 
 
+
 pokebelt = fn.get_pokemon()
 
 def add_pokemon():
@@ -27,14 +28,37 @@ for pokemon in stripped_pokebelt:
     col1, col2 = st.columns(2)    
 
     with col1:
+        #-------------------------------------------------------------------------------------
+        #implement an if try function
         st.subheader(pokemon.capitalize())
+        #----------------------------------------------------------------------------------------
+        #Run only when pokemon is not found in the csv
         pokemon_details = dex.search_pokemon(pokemon)
         image = f"https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/{pokemon_details[0]}.svg"
         st.image(image, width = 200 )
         # st.text_input(label = "Held item", placeholder="Which item?", 
         #       on_change=add_item, key='new_item')
+        
+#-------------------------------------------------------------
+#add a delete pokemon function
+# for index,todo in enumerate(todos):
+#     col1, col2 = st.columns([2, 8])
+#     with col2: 
+#         st.markdown(todo)
+#     with col1:
+#         delete = st.button(f":wastebasket: {index+1}.)", key= todo) # 
+#     if delete:
+#         todos.pop(index)
+#         functions.write_todos(todos)
+#         del st.session_state[todo]
+#         st.rerun()
+
+
+
 
     with col2:
+        #-----------------------------------------------------------------------------------------
+        #Store to csv as a dict, then retrieve
         st.write(f"""\n
                 Pokemon: {pokemon_details[1]} \n
                 ID: {pokemon_details[0]} \n
@@ -45,6 +69,5 @@ for pokemon in stripped_pokebelt:
                 Base Special Defense: {pokemon_details[6]} \n
                 Base Speed: {pokemon_details[7]}\n
                 \n ________________
-                
+        
                 """)
-

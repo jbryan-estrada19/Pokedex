@@ -1,6 +1,5 @@
-latias
-chansey
-charmander
-tyrantrum
-diglett
-
+wobbuffet
+mamoswine
+groudon
+kyogre
+Greninja

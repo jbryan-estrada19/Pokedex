@@ -4,8 +4,8 @@ import streamlit as st
 @st.cache_data
 
 
-def search_pokemon(name):
-    response = rq.get(f"https://pokeapi.co/api/v2/pokemon/{name}/")
+def search_pokemon(entry):
+    response = rq.get(f"https://pokeapi.co/api/v2/pokemon/{entry}/")
     if response.status_code == 200:
         try:
             response.raise_for_status()  # Raise an exception for HTTP errors
@@ -30,6 +30,8 @@ def search_pokemon(name):
         except ValueError as e:
             print(f"JSON Decode Error: {e}")
             return None  # Handle JSON decode errors gracefully
+        except KeyError as e:
+            print("No problems I don't think?")
 
 
 
