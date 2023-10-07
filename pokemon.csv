@@ -1,0 +1,12 @@
+poke_id,poke_name,base_hp,base_atk,base_def,base_satk,base_sdef,base_spd
+25,pikachu,35,55,40,50,50,90
+26,raichu,60,90,55,90,80,110
+389,torterra,95,109,105,75,85,56
+196,espeon,65,65,60,130,95,110
+384,rayquaza,105,150,90,150,90,95
+113,chansey,250,5,5,35,105,50
+172,pichu,20,40,15,35,35,60
+324,torkoal,70,85,140,85,70,20
+54,psyduck,50,52,48,65,50,55
+4,charmander,39,52,43,60,50,65
+51,dugtrio,35,100,50,50,70,120

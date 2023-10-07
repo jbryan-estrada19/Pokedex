@@ -1,5 +1,4 @@
-wobbuffet
-mamoswine
-groudon
-kyogre
-Greninja
+raichu
+pikachu
+dugtrio
+rayquaza
