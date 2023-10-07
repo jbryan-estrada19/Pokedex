@@ -52,7 +52,7 @@ def search_pokemon(entry):
         except KeyError as e:
             print("No problems I don't think?")
 
-#Decision making: pokemon in csv? 
+#Decision making: pokemon in csv? ; uses fetch_pokemoncsv,add_pokemonapi,create_column
 def read_file(pokemon, filepath='pokemon.csv'):
     df = pd.read_csv(filepath)
     result = df.query(f"poke_name=='{pokemon}'")
@@ -60,7 +60,7 @@ def read_file(pokemon, filepath='pokemon.csv'):
         pokemon_details = fetch_pokemoncsv(result)
         create_column(pokemon_details)
     else:
-        pokemon_details = add_pokemonapi(pokemon)
+        pokemon_details = fetch_pokemonapi(pokemon)
         create_column(pokemon_details)
     return pokemon_details
 
@@ -70,13 +70,13 @@ def fetch_pokemoncsv(result):
     return pokemon_details
 
 #Fetches pokemon details from pokeAPI.com
-def add_pokemonapi(pokemon):
+def fetch_pokemonapi(pokemon):
     print(f'No {pokemon} Pokemon found in files. Searching the internet... ')
     pokemon_details = fn.search_pokemon(pokemon)
     fn.write_file(pokemon_details)
     return pokemon_details
 
-#Creates column
+#Creates column based on fetched data 
 def create_column(pokemon_details):
     col1, col2 = st.columns(2)    
     with col1:
