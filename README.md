@@ -6,13 +6,10 @@ V0.3: Created functions and deleted pokedex.py
       Implemented a csv-write function to store pokemon data into a csv file
       Implemented a validation mechanism that checks if the pokemon data is in the csv then fetches the data from the csv. If not, requests pokeAPI.com for the data then stores it in the csv.
       Fixed bugs. 
+V0.3.1 Changed function name for better clarity
 
 Next features:
 1. Allow user to delete pokemon using while true
-2. Error handling if pokemon is not in 
+2. Error handling if pokemon is not found in both functions
 
-files: 
-
-text file to contain list
-csv file to contain pokemon
 
